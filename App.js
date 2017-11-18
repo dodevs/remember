@@ -75,13 +75,11 @@ class RecScreen extends React.Component {
 
   onRec = (micState) => {
     if(micState == true){
-      this.setState({recIcon: 'mic-off'});
-      this.setState({recText: 'gravar'});
+      this.setState({recIcon: 'mic-off', recText: 'gravar'});
       this.recState = false;
       this.pausable = false;
     } else if(micState == false){
-      this.setState({recIcon: 'mic'});
-      this.setState({recText: 'parar'});
+      this.setState({recIcon: 'mic', recText: 'parar'});
       this.recState = true;
       this.pausable = true;
     } else if(micState == "play"){
@@ -153,9 +151,7 @@ class App extends Component {
 
   constructor(props){
     super(props);
-    this.state = {
-        recIcon: 'mic'
-    }
+    this.state = {}
   }
   render(){
     return <RootDrawer/>;
